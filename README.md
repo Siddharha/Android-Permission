@@ -4,7 +4,7 @@ Easily handle permission in your Android app by "Android-Permission". It's easie
 ##Steps:
 
 ###1. Define:
-private static final int PERMISSION_ALL = 100;
+private static final int PERMISSION_ALL = 100; </br>
 private CreativePermission myPermission;
 private String[] PERMISSIONS = { Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
