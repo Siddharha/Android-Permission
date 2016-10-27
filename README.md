@@ -1,6 +1,5 @@
-# Android-Permission
+# Android-Permission 
 Easily handle permission in your Android app by "Android-Permission". It's easier than you think.
-
 ##Steps:
 
 ###1. Define:
@@ -26,3 +25,19 @@ ________________________________________________________________________________
 #Download JAR (.jar):
 Download jar library file from this link: 
 https://raw.githubusercontent.com/Siddharha/Android-Permission/master/app/release/android_permission.jar
+
+## License
+
+    Copyright 2011-2015 Sergey Tarasevich
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
