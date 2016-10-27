@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 24
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+}
+
+//task to delete the old jar
+task deleteOldJar(type: Delete){
+    delete 'release/android_permission.jar'
+}
+
+//task to export contents as jar
+task exportJar(type: Copy){
+    from('build/intermediates/bundles/release/')
+    into('release/')
+    include('classes.jar')
+    //Give whatever name you to give
+    rename('classes.jar', 'android_permission.jar')
+}
+
+exportJar.dependsOn(deleteOldJar, build)
+
