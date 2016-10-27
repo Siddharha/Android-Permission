@@ -10,18 +10,18 @@ import android.support.v4.app.ActivityCompat;
  * Created by siddhartha on 27/10/16.
  */
 
-public class MainPermission {
-    Context context;
+public class CreativePermission {
+    private static Context context;
 
     int permissionType;
     String[] permission;
-    public MainPermission(Context context,String[] permission,int permissionType) {
+    public CreativePermission(Context context, String[] permission, int permissionType) {
         this.context = context;
         this.permission = permission;
         this.permissionType = permissionType;
     }
 
-    public static boolean hasPermissions(Context context, String... permissions) {
+    public static boolean hasPermissions(String... permissions) {
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
             for (String permission : permissions) {
                 if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
@@ -32,7 +32,7 @@ public class MainPermission {
         return true;
     }
 
-    public void reqNotePermisions(){
+    public void reqPermisions(){
         ActivityCompat.requestPermissions((Activity) context, permission, permissionType);
     }
 
