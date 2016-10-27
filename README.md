@@ -25,4 +25,4 @@ ________________________________________________________________________________
 
 #Download JAR (.jar):
 Download jar library file from this link: 
-https://github.com/Siddharha/Android-Permission/blob/master/app/release/android_permission.jar
+https://raw.githubusercontent.com/Siddharha/Android-Permission/master/app/release/android_permission.jar
