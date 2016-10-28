@@ -28,7 +28,7 @@ https://raw.githubusercontent.com/Siddharha/Android-Permission/master/app/releas
 
 ## License
 
-    Copyright 2011-2015 Sergey Tarasevich
+    Copyright 2016 Siddhartha Maji
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
