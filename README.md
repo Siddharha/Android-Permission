@@ -9,7 +9,7 @@ private String[] PERMISSIONS = { Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
             
 ###2. Initialize:
-nmyPermission = new CreativePermission(this,PERMISSIONS,PERMISSION_ALL);
+myPermission = new CreativePermission(this,PERMISSIONS,PERMISSION_ALL);
 
 ###3. Check Permission:
  if(!myPermission.hasPermissions(PERMISSIONS))
