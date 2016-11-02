@@ -1,5 +1,6 @@
 package in.creativelizard.androidpermission;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
@@ -16,6 +17,8 @@ class CreativePermission {
      private static Context context;
     private int permissionType;
     private String[] permission;
+
+    public Manifest.permission cPermissionType;
     public CreativePermission(Context context, String[] permission, int permissionType) {
         CreativePermission.context = context;
         this.permission = permission;
