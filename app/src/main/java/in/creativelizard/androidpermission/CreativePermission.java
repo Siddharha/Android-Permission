@@ -12,7 +12,7 @@ import android.support.v4.app.ActivityCompat;
  * Created by siddhartha on 27/10/16.
  */
 
-class CreativePermission {
+public class CreativePermission {
      @SuppressLint("StaticFieldLeak")
      private static Context context;
     private int permissionType;
