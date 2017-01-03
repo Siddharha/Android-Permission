@@ -23,6 +23,22 @@ myPermission = new CreativePermission(this,PERMISSIONS,PERMISSION_ALL);
 ###4. Request permission:
 myPermission.reqPermisions();
 
+###5. Request Permission Result:
+ @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode == PERMISSION_ALL) {
+            
+            for(int i=0;i<permissions.length;i++){
+                if(grantResults[i] != -1){
+                    Toast.makeText(this, "is Granted", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(this, "Not Granted", Toast.LENGTH_SHORT).show();
+                }
+            }
+          
+        }
+    }
 ____________________________________________________________________________________________________________
 
 #Download JAR (.jar):
