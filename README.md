@@ -29,7 +29,8 @@ myPermission.reqPermisions();
 ### 5. Request Permission Result:
  @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults); </br>
+        
         if(requestCode == PERMISSION_ALL) {
  //Implement Your Code
           
