@@ -4,38 +4,34 @@ Easily handle permission in your Android app by "Android-Permission". It's easie
 
 ###1. Define:
 ** Define permission in Android Manifest:
-#### uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+
+uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+
+ # And Then Follow Steps:
  
 private static final int PERMISSION_ALL = 100; </br>
 private CreativePermission myPermission;
 private String[] PERMISSIONS = { Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
             
-###2. Initialize:
+### 2. Initialize:
 myPermission = new CreativePermission(this,PERMISSIONS,PERMISSION_ALL);
 
-###3. Check Permission:
+### 3. Check Permission:
  if(!myPermission.hasPermissions(PERMISSIONS))
         {
             //Call Permission..
         }
         
-###4. Request permission:
+### 4. Request permission:
 myPermission.reqPermisions();
 
-###5. Request Permission Result:
+### 5. Request Permission Result:
  @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if(requestCode == PERMISSION_ALL) {
-            
-            for(int i=0;i<permissions.length;i++){
-                if(grantResults[i] != -1){
-                    Toast.makeText(this, "is Granted", Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(this, "Not Granted", Toast.LENGTH_SHORT).show();
-                }
-            }
+ //Implement Your Code
           
         }
     }
