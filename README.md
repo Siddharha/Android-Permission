@@ -9,7 +9,7 @@ Easily handle permission in your Android app by "Android-Permission". It's easie
 
  # And Then Follow Steps:
  
-    private static final int PERMISSION_ALL = 100;</br>
+    private static final int PERMISSION_ALL = 100;
     private CreativePermission myPermission;
             
 ### 2. Initialize:
