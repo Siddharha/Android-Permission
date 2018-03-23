@@ -13,13 +13,10 @@ Easily handle permission in your Android app by "Android-Permission". It's easie
     private CreativePermission myPermission;
             
 ### 2. Initialize:
-    myPermission = new CreativePermission(this,PERMISSIONS,PERMISSION_ALL);
+    myPermission = new CreativePermission(this,PERMISSION_ALL);
 
 ### 3. Check Permission:
-    if(!myPermission.hasPermissions(PERMISSIONS))
-           {
-               //Call Permission..
-           }
+     if (!myPermission.hasPermissions()) {//TODO:// IMPLEMENT CODE.}
         
 ### 4. Request permission:
     myPermission.reqPermisions();
