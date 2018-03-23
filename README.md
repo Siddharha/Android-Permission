@@ -4,15 +4,12 @@ Easily handle permission in your Android app by "Android-Permission". It's easie
 
 ###1. Define:
 ** Define permission in Android Manifest:
-
-uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
  # And Then Follow Steps:
  
-private static final int PERMISSION_ALL = 100; </br>
+private static final int PERMISSION_ALL = 100;</br>
 private CreativePermission myPermission;
-private String[] PERMISSIONS = { Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE};
             
 ### 2. Initialize:
 myPermission = new CreativePermission(this,PERMISSIONS,PERMISSION_ALL);
