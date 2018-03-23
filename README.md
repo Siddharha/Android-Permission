@@ -4,35 +4,36 @@ Easily handle permission in your Android app by "Android-Permission". It's easie
 
 ###1. Define:
 ** Define permission in Android Manifest:
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
  # And Then Follow Steps:
  
-private static final int PERMISSION_ALL = 100;</br>
-private CreativePermission myPermission;
+    private static final int PERMISSION_ALL = 100;</br>
+    private CreativePermission myPermission;
             
 ### 2. Initialize:
-myPermission = new CreativePermission(this,PERMISSIONS,PERMISSION_ALL);
+    myPermission = new CreativePermission(this,PERMISSIONS,PERMISSION_ALL);
 
 ### 3. Check Permission:
- if(!myPermission.hasPermissions(PERMISSIONS))
-        {
-            //Call Permission..
-        }
+    if(!myPermission.hasPermissions(PERMISSIONS))
+           {
+               //Call Permission..
+           }
         
 ### 4. Request permission:
-myPermission.reqPermisions();
+    myPermission.reqPermisions();
 
 ### 5. Request Permission Result:
- @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults); </br>
-        
-        if(requestCode == PERMISSION_ALL) {
- //Implement Your Code
-          
-        }
-    }
+    @Override
+       public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+           super.onRequestPermissionsResult(requestCode, permissions, grantResults); </br>
+
+           if(requestCode == PERMISSION_ALL) {
+    //Implement Your Code
+
+           }
+       }
 ____________________________________________________________________________________________________________
 
 #Download JAR (.jar):
