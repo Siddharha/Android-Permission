@@ -13,19 +13,21 @@ import android.support.v4.app.ActivityCompat;
  */
 
 public class CreativePermission {
-     @SuppressLint("StaticFieldLeak")
-     private static Context context;
+    Context context;
     private int permissionType;
     private String[] permission;
 
     public Manifest.permission cPermissionType;
     public CreativePermission(Context context, String[] permission, int permissionType) {
-        CreativePermission.context = context;
         this.permission = permission;
         this.permissionType = permissionType;
     }
 
-    public static boolean hasPermissions(String... permissions) {
+    public CreativePermission(Context context) {
+        this.context = context;
+    }
+
+    public boolean hasPermissions(String... permissions) {
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
             for (String permission : permissions) {
                 if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
